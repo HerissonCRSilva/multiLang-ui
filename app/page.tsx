@@ -85,16 +85,16 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {news.map((item) => (
                 <article
-                  key={item.title}
+                  key={item['title']}
                   className="bg-gray-100 p-4 rounded-md shadow-sm"
                 >
-                  <h2 className="text-xl font-bold">{item.title}</h2>
-                  <p className="text-gray-700">{item.content}</p>
+                  <h2 className="text-xl font-bold">{item['title']}</h2>
+                  <p className="text-gray-700">{item['content']}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">{item.author}</span> -{" "}
-                    <span className="text-gray-600">{item.date}</span>
+                    <span className="text-gray-600">{item['author']}</span> -{" "}
+                    <span className="text-gray-600">{item['date']}</span>
                     <a
-                      href={item.link}
+                      href={item['link']}
                       className="text-blue-500 hover:text-blue-700"
                     >
                       Link
