@@ -16,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    /* Adicionando suspensão de verificação do userSearch */
     <Suspense>
       <html lang="en">
         <body className={inter.className}>{children}</body>
