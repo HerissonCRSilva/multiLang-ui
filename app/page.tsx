@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Suspense } from "react"
 
 export default function Home() {
   const [loadingTime, setLoadingTime] = useState(0);
@@ -47,7 +48,7 @@ export default function Home() {
             <button
               className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
               onClick={() => {
-                router.push(pathname + "?lang=en", { scroll: false });
+                router.push(pathname ?? + "?lang=en", { scroll: false });
                 setLang("en");
                 fetchNews();
               }}
@@ -57,7 +58,7 @@ export default function Home() {
             <button
               className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
               onClick={() => {
-                router.push(pathname + "?lang=pt", { scroll: false });
+                router.push(pathname ?? + "?lang=pt", { scroll: false });
                 setLang("pt");
                 fetchNews();
               }}
